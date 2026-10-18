@@ -1,0 +1,81 @@
+import React from 'react';
+
+function Blog() {
+  const blogs = [
+    {
+      img: '/assets/images/blog-1.jpg',
+      title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor .',
+      content: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.Lorem ipsum dolor sit amet, conse sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .Lorem ipsum dolor sit amet, consetetur sadipscing elit.',
+      type: 'large'
+    },
+    {
+      img: '/assets/images/blog-2.jpg',
+      title: 'Lorem ipsum dolor sit amet, consetetur sadipscing .',
+      content: 'Lorem ipsum dolor sit consetetur sadipscing elitr, sed diam.',
+      type: 'small'
+    },
+    {
+      img: '/assets/images/blog-3.jpg',
+      title: 'Lorem ipsum dolor sit amet, consetetur sadipscing .',
+      content: 'Lorem ipsum dolor sit consetetur sadipscing elitr, sed diam.',
+      type: 'small'
+    },
+    {
+      img: '/assets/images/blog-4.jpg',
+      title: 'Lorem ipsum dolor sit amet, consetetur sadipscing .',
+      content: 'Lorem ipsum dolor sit consetetur sadipscing elitr, sed diam.',
+      type: 'small'
+    }
+  ];
+
+  return (
+    <section id="blog" className="blog_area pt-120 pb-130">
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-lg-6">
+            <div className="section_title text-center pb-25">
+              <h4 className="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Recent Blog</h4>
+              <p className="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-lg-6">
+            <div className="single_blog mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+              <div className="blog_image">
+                <img src={blogs[0].img} alt="blog" />
+              </div>
+              <div className="blog_content">
+                <h3 className="blog_title"><a href="#0">{blogs[0].title}</a></h3>
+                <p>{blogs[0].content}</p>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            {blogs.slice(1).map((blog, index) => (
+              <div 
+                key={index} 
+                className="single_blog blog_2 d-sm-flex mt-30 wow fadeInUp" 
+                data-wow-duration="1.3s"
+                data-wow-delay={`${0.2 + index * 0.1}s`}
+              >
+                <div className="blog_image">
+                  <img src={blog.img} alt="blog" />
+                </div>
+                <div className="blog_content media-body">
+                  <h3 className="blog_title"><a href="#0">{blog.title}</a></h3>
+                  <p>{blog.content}</p>
+                  <a href="#0" className="more">Read More</a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Blog;
