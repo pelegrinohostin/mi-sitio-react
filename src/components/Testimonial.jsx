@@ -6,19 +6,19 @@ function Testimonial() {
       img: '/assets/images/author-1.jpg',
       name: 'Isabela Moreira',
       role: 'UX Specialist, Yoast',
-      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.'
+      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.'
     },
     {
       img: '/assets/images/author-2.jpg',
       name: 'Fiona Smith',
       role: 'Sr. Software Engineer',
-      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.'
+      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.'
     },
     {
       img: '/assets/images/author-3.jpg',
       name: 'Elon Musk',
-      role: 'Creaitve Businessman',
-      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.'
+      role: 'Creative Businessman',
+      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.'
     }
   ];
 
@@ -35,7 +35,19 @@ function Testimonial() {
               <div className="testimonial_active">
                 {testimonials.map((item, index) => (
                   <div key={index} className="single_testimonial text-center">
-                    <img src={item.img} alt={item.name} />
+                    <img 
+                      src={item.img} 
+                      alt={item.name} 
+                      style={{
+                        width: '100px',
+                        height: '100px',
+                        objectFit: 'cover',
+                        borderRadius: '50%',
+                        margin: '0 auto 15px',
+                        objectPosition: 'center 20%' // Ajusta este valor para subir/bajar el rostro
+                      }} 
+                    />
+                    {/* Solo mostramos el nombre una vez */}
                     <h5 className="author_name">{item.name}</h5>
                     <span>{item.role}</span>
                     <p>{item.text}</p>

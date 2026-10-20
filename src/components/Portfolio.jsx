@@ -18,9 +18,9 @@ function Portfolio() {
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="section_title text-center pb-60">
-              <h4 className="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Our Portfolio</h4>
+              <h4 className="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Paseo por Mís Recuerdos</h4>
               <p className="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.
+                La alegría de estar vivo y soñar, me hace feliz recordar que mi familia siempre estará ahí para mí y yo para ellos  .
               </p>
             </div>
           </div>

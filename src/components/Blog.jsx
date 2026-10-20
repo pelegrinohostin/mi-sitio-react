@@ -3,7 +3,7 @@ import React from 'react';
 function Blog() {
   const blogs = [
     {
-      img: '/assets/images/blog-1.jpg',
+      img: '/assets/images/blog-1.png',
       title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor .',
       content: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.Lorem ipsum dolor sit amet, conse sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .Lorem ipsum dolor sit amet, consetetur sadipscing elit.',
       type: 'large'
@@ -34,9 +34,9 @@ function Blog() {
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="section_title text-center pb-25">
-              <h4 className="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Recent Blog</h4>
+              <h4 className="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Decir Soñar</h4>
               <p className="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.
+                Es la forma de ver la vida, porqué ver el vaso medio vacío, sí existe mil y una forma de llenar la copa de la existencia humana  .
               </p>
             </div>
           </div>

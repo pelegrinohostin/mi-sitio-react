@@ -3,7 +3,7 @@ import React from 'react';
 function About() {
   return (
     <section id="about" className="pt-130">
-      <div className="about_area" style={{position: 'relative'}}>
+      <div className="about_area" style={{position: 'relative', overflow: 'hidden'}}> {/* overflow:hidden evita desbordes */}
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
@@ -34,14 +34,7 @@ function About() {
           data-wow-delay="0.2s"
           style={{
             backgroundImage: 'url(/assets/images/about.jpg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            height: '100%', // Asegura que ocupe el alto
-            minHeight: '500px', // Altura mínima por si el CSS falla
-            position: 'absolute', // Posicionamiento típico de esta plantilla
-            right: '0',
-            top: '0',
-            width: '50%' // Ocupa la mitad derecha
+            // Dejamos que el CSS maneje el tamaño, pero aseguramos cover
           }}
         >
           <div className="image_content">
