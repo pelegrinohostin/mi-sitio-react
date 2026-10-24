@@ -4,26 +4,26 @@ function Blog() {
   const blogs = [
     {
       img: '/assets/images/blog-1.png',
-      title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor .',
-      content: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.Lorem ipsum dolor sit amet, conse sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore magna .Lorem ipsum dolor sit amet, consetetur sadipscing elit.',
+      title: 'La vida sin sueño y esperanza es una vida vacía  .',
+      content: 'Espero respuestas en el camino que he elegido.',
       type: 'large'
     },
     {
       img: '/assets/images/blog-2.jpg',
-      title: 'Lorem ipsum dolor sit amet, consetetur sadipscing .',
-      content: 'Lorem ipsum dolor sit consetetur sadipscing elitr, sed diam.',
+      title: 'Sín ti la vida se vuelve sin alegría de vivirla.',
+      content: 'Todo lo que poseo es la fé de que estarás junto a mí.',
       type: 'small'
     },
     {
       img: '/assets/images/blog-3.jpg',
-      title: 'Lorem ipsum dolor sit amet, consetetur sadipscing .',
-      content: 'Lorem ipsum dolor sit consetetur sadipscing elitr, sed diam.',
+      title: 'Comenzamos con alegrías y felices sueños .',
+      content: 'Sonriamos juntos haremos la diferencia .',
       type: 'small'
     },
     {
       img: '/assets/images/blog-4.jpg',
-      title: 'Lorem ipsum dolor sit amet, consetetur sadipscing .',
-      content: 'Lorem ipsum dolor sit consetetur sadipscing elitr, sed diam.',
+      title: 'Quiero que esto sea siempre y para siempre .',
+      content: 'Estaré feliz a tu lado.',
       type: 'small'
     }
   ];

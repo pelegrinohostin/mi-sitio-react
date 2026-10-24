@@ -4,18 +4,18 @@ function Team() {
   const members = [
     { 
       img: '/assets/images/team-1.jpg', 
-      name: 'Tom Hanks.', 
-      role: 'Head Of Ideas' 
+      name: 'Martina.', 
+      role: 'Retrospectiva' 
     },
     { 
       img: '/assets/images/team-2.jpg', 
-      name: 'Jennifer L.', 
-      role: 'UX Designer' 
+      name: 'Martina', 
+      role: 'Retrospectiva' 
     },
     { 
       img: '/assets/images/team-3.jpg', 
-      name: 'Rob Percy', 
-      role: 'Creative Designer' 
+      name: 'Martina', 
+      role: 'Sueño feliz' 
     }
   ];
 
@@ -25,9 +25,9 @@ function Team() {
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="section_title text-center pb-25">
-              <h4 className="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Meet The Team</h4>
+              <h4 className="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Mis Sueños Felices</h4>
               <p className="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.
+                Soñar y sonreír Vamos hacer un Mundo mejor, todo es posible si nos une un mismo sueño hay que ser felices.
               </p>
             </div>
           </div>
