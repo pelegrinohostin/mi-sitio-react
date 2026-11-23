@@ -817,6 +817,7 @@ p {
 
 .about_image {
   position: absolute;
+  border-radius: 12px;
   top: 0;
   right: 0;
   width: 50%;
@@ -847,6 +848,7 @@ p {
   width: 185px;
   height: 185px;
   background-color: #e84e4e;
+  border-radius: 10%;
   display: table;
   text-align: center;
   position: relative;
@@ -881,6 +883,9 @@ p {
   font-weight: 500;
   display: table-cell;
   vertical-align: middle;
+}
+.main-btn {
+  border-radius: 12px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {

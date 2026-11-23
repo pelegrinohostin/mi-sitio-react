@@ -4,21 +4,21 @@ function Testimonial() {
   const testimonials = [
     {
       img: '/assets/images/author-1.jpg',
-      name: 'Isabela Moreira',
-      role: 'UX Specialist, Yoast',
-      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.'
+      name: 'Mariana Olivera',
+      role: 'Veterinaria, amo ami familia',
+      text: 'La vida es una caja de sorpresa, sonrío se feliz.'
     },
     {
       img: '/assets/images/author-2.jpg',
-      name: 'Fiona Smith',
-      role: 'Sr. Software Engineer',
-      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.'
+      name: 'Macarena y Sofia',
+      role: 'Amigas y primas inseparables',
+      text: 'Nos esforzamos por traer las mejores notas del colegio, para nuestros padres.'
     },
     {
       img: '/assets/images/author-3.jpg',
-      name: 'Elon Musk',
-      role: 'Creative Businessman',
-      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.'
+      name: 'Emilia la Sonrisa de nuestra casa',
+      role: 'Jugar y aprender es mí pasatiempo favorito',
+      text: 'Extraño a mi abuela, juego con ella cuando nos visita en casa.'
     }
   ];
 

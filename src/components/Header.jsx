@@ -1,15 +1,19 @@
-import React from "react";
+// src/components/Header.jsx
+import React, { useState } from "react";
 
-function Header() {
+function Header({ onOpenLogin }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <section id="home" className="header_area">
-      {/* Navbar */}
       <div id="header_navbar" className="header_navbar">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <nav className="navbar navbar-expand-lg">
-                <a className="navbar-brand" href="#home">
+                <a className="navbar-brand" href="#home" onClick={closeMenu}>
                   <img
                     id="logo"
                     src="/assets/images/logo.svg"
@@ -17,11 +21,13 @@ function Header() {
                     style={{ maxHeight: "40px" }}
                   />
                 </a>
+
                 <button
-                  className="navbar-toggler collapsed"
+                  className={`navbar-toggler ${menuOpen ? "" : "collapsed"}`}
                   type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent"
+                  aria-expanded={menuOpen}
+                  aria-label="Alternar navegación"
+                  onClick={() => setMenuOpen((prev) => !prev)}
                 >
                   <span className="toggler-icon"></span>
                   <span className="toggler-icon"></span>
@@ -29,45 +35,59 @@ function Header() {
                 </button>
 
                 <div
-                  className="collapse navbar-collapse sub-menu-bar"
+                  className={`collapse navbar-collapse sub-menu-bar ${menuOpen ? "show" : ""}`}
                   id="navbarSupportedContent"
                 >
-                  <ul id="nav" className="navbar-nav ms-auto">
+                  <ul id="nav" className="navbar-nav ms-auto align-items-lg-center">
                     <li className="nav-item">
-                      <a className="page-scroll active" href="#home">
+                      <a className="page-scroll active" href="#home" onClick={closeMenu}>
                         Inicio
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="page-scroll" href="#about">
+                      <a className="page-scroll" href="#about" onClick={closeMenu}>
                         About
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="page-scroll" href="#services">
+                      <a className="page-scroll" href="#services" onClick={closeMenu}>
                         Services
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="page-scroll" href="#portfolio">
+                      <a className="page-scroll" href="#portfolio" onClick={closeMenu}>
                         Gallery
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="page-scroll" href="#team">
+                      <a className="page-scroll" href="#team" onClick={closeMenu}>
                         Team
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="page-scroll" href="#blog">
+                      <a className="page-scroll" href="#blog" onClick={closeMenu}>
                         Blog
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="page-scroll" href="#contact">
+                      <a className="page-scroll" href="#contact" onClick={closeMenu}>
                         Contact
                       </a>
                     </li>
+                    {onOpenLogin && (
+                      <li className="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <button
+                          type="button"
+                          className="btn btn-sm btn-primary"
+                          onClick={() => {
+                            closeMenu();
+                            onOpenLogin();
+                          }}
+                        >
+                          Ingresar
+                        </button>
+                      </li>
+                    )}
                   </ul>
                 </div>
               </nav>
@@ -76,7 +96,6 @@ function Header() {
         </div>
       </div>
 
-      {/* Hero Section con Imagen de Fondo */}
       <div className="header_hero">
         <div
           className="single_hero bg_cover d-flex align-items-center"
@@ -84,7 +103,7 @@ function Header() {
             backgroundImage: "url(/assets/images/hero.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            height: "100vh", // Importante para que ocupe toda la pantalla
+            height: "100vh",
             width: "100%",
           }}
         >

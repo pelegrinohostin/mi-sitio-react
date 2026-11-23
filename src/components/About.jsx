@@ -10,17 +10,18 @@ function About() {
               <div className="about_content pt-120 pb-130">
                 <div className="section_title pb">
                   <h4 className="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                    About Our Creative Proccess
+                    Esto es un poco de mí 
                   </h4>
                   <p className="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                    Esto es mi vida y parte de mi vida.
+                    Quiero recordar esto por mucho tiempo
                   </p>
                   <p className="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.6s">
-                    Sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                    La verdad es que la quiero mucho, es ní vida parte de mí vida.
                   </p>
                 </div>
                 <a href="#0" className="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.7s">
-                  Learn More
+                  Aquí estoy
                 </a>
               </div>
             </div>
