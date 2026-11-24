@@ -1,10 +1,16 @@
 // src/components/Header.jsx
 import React, { useState } from "react";
 
-function Header({ onOpenLogin }) {
+function Header({ user, onOpenLogin, onLogout }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const closeMenu = () => setMenuOpen(false);
+
+  const displayName =
+    user?.user_metadata?.full_name ||
+    user?.user_metadata?.name ||
+    user?.email ||
+    "";
 
   return (
     <section id="home" className="header_area">
@@ -38,55 +44,111 @@ function Header({ onOpenLogin }) {
                   className={`collapse navbar-collapse sub-menu-bar ${menuOpen ? "show" : ""}`}
                   id="navbarSupportedContent"
                 >
-                  <ul id="nav" className="navbar-nav ms-auto align-items-lg-center">
+                  <ul
+                    id="nav"
+                    className="navbar-nav ms-auto align-items-lg-center"
+                  >
                     <li className="nav-item">
-                      <a className="page-scroll active" href="#home" onClick={closeMenu}>
+                      <a
+                        className="page-scroll active"
+                        href="#home"
+                        onClick={closeMenu}
+                      >
                         Inicio
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="page-scroll" href="#about" onClick={closeMenu}>
+                      <a
+                        className="page-scroll"
+                        href="#about"
+                        onClick={closeMenu}
+                      >
                         About
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="page-scroll" href="#services" onClick={closeMenu}>
+                      <a
+                        className="page-scroll"
+                        href="#services"
+                        onClick={closeMenu}
+                      >
                         Services
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="page-scroll" href="#portfolio" onClick={closeMenu}>
+                      <a
+                        className="page-scroll"
+                        href="#portfolio"
+                        onClick={closeMenu}
+                      >
                         Gallery
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="page-scroll" href="#team" onClick={closeMenu}>
+                      <a
+                        className="page-scroll"
+                        href="#team"
+                        onClick={closeMenu}
+                      >
                         Team
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="page-scroll" href="#blog" onClick={closeMenu}>
+                      <a
+                        className="page-scroll"
+                        href="#blog"
+                        onClick={closeMenu}
+                      >
                         Blog
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="page-scroll" href="#contact" onClick={closeMenu}>
+                      <a
+                        className="page-scroll"
+                        href="#contact"
+                        onClick={closeMenu}
+                      >
                         Contact
                       </a>
                     </li>
-                    {onOpenLogin && (
-                      <li className="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <button
-                          type="button"
-                          className="btn btn-sm btn-primary"
-                          onClick={() => {
-                            closeMenu();
-                            onOpenLogin();
-                          }}
+
+                    {user ? (
+                      <li className="nav-item ms-lg-3 mt-2 mt-lg-0 d-flex align-items-center gap-2 flex-wrap">
+                        <span
+                          className="badge bg-light text-dark border px-2 py-1 text-truncate"
+                          style={{ maxWidth: "180px" }}
+                          title={user.email}
                         >
-                          Ingresar
-                        </button>
+                          {displayName}
+                        </span>
+                        {onLogout && (
+                          <button
+                            type="button"
+                            className="btn btn-sm btn-outline-danger"
+                            onClick={() => {
+                              closeMenu();
+                              onLogout();
+                            }}
+                          >
+                            Salir
+                          </button>
+                        )}
                       </li>
+                    ) : (
+                      onOpenLogin && (
+                        <li className="nav-item ms-lg-3 mt-2 mt-lg-0">
+                          <button
+                            type="button"
+                            className="btn btn-sm btn-primary"
+                            onClick={() => {
+                              closeMenu();
+                              onOpenLogin();
+                            }}
+                          >
+                            Ingresar
+                          </button>
+                        </li>
+                      )
                     )}
                   </ul>
                 </div>
@@ -128,7 +190,8 @@ function Header({ onOpenLogin }) {
                     Creo fielmente en el esfuerzo humano , y la calidez del
                     alma.
                     <br />
-                    Espero fielmente en la recompensa de nuestros esfuerzo, <br />
+                    Espero fielmente en la recompensa de nuestros esfuerzo,{" "}
+                    <br />
                     la familia es la luz que me gia hacia adelante con fe.
                   </p>
                   <a

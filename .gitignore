@@ -1,3 +1,5 @@
+# gitignore
+
 # Dependencias (Lo más importante)
 node_modules/
 
